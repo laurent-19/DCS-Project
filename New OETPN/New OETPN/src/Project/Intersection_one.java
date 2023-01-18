@@ -123,10 +123,10 @@ public class Intersection_one {
         p14.SetName("P_o3Exit");
         pn.PlaceList.add(p14);
 
-        DataTransfer p_O3_OUT = new DataTransfer();
-        p_O3_OUT.SetName("p_O3_OUT");
-        p_O3_OUT.Value = new TransferOperation("localhost", "1082", "P_a3");
-        pn.PlaceList.add(p_O3_OUT);
+        DataTransfer P_o3_OUT = new DataTransfer();
+        P_o3_OUT.SetName("P_o3_OUT");
+        P_o3_OUT.Value = new TransferOperation("localhost", "1082", "P_a3");
+        pn.PlaceList.add(P_o3_OUT);
 
         // ---------------------------------------------- Center --------------------------------------------------- //
 
@@ -393,7 +393,7 @@ public class Intersection_one {
 
         GuardMapping grdT13 = new GuardMapping();
         grdT13.condition = T13Ct1;
-        grdT13.Activations.add(new Activation(t13, "P_o3Exit", TransitionOperation.SendOverNetwork, "p_O3_OUT"));
+        grdT13.Activations.add(new Activation(t13, "P_o3Exit", TransitionOperation.SendOverNetwork, "P_o3_OUT"));
         t13.GuardMappingList.add(grdT13);
 
         t13.Delay = 0;

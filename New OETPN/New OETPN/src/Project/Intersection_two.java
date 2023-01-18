@@ -240,10 +240,10 @@ public class Intersection_two {
         PetriTransition t19 = new PetriTransition(pn);
         t19.TransitionName = "T_i4";
         t19.InputPlaceName.add("P_b4");
-        t19.InputPlaceName.add("P_I3");
+        t19.InputPlaceName.add("P_I2");
 
         Condition T19Ct1 = new Condition(t19, "P_b4", TransitionCondition.NotNull);
-        Condition T19Ct2 = new Condition(t19, "P_I3", TransitionCondition.CanAddCars);
+        Condition T19Ct2 = new Condition(t19, "P_I2", TransitionCondition.CanAddCars);
         T19Ct1.SetNextCondition(LogicConnector.AND, T19Ct2);
 
         GuardMapping grdT19 = new GuardMapping();
@@ -313,7 +313,7 @@ public class Intersection_two {
 
         // T23
         PetriTransition t23 = new PetriTransition(pn);
-        t23.TransitionName = "T_g4Exit";
+        t23.TransitionName = "T_g5Exit";
         t23.InputPlaceName.add("P_o5");
 
         Condition T23Ct1 = new Condition(t23, "P_o5", TransitionCondition.HaveCar);
